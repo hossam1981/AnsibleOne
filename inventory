@@ -1,0 +1,12 @@
+
+[local]
+localhost ansible_connection=local
+
+[kali]
+192.168.1.178 ansible_user=hossam ansible_ssh_pass=software ansible_become_pass=software
+192.168.1.183 ansible_user=kali ansible_ssh_pass=kali ansible_become_pass=kali
+
+[centos]
+192.168.1.101 ansible_user=mac-centos-user ansible_ssh_pass=SOFTWARE ansible_become_pass=SOFTWARE
+
+

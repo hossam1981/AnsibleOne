@@ -1,0 +1,24 @@
+---
+- hosts: kali
+  become: yes
+  tasks:
+    - name: Ensure htop is installed on Kali
+      apt:
+        name: htop
+        state: present
+        update_cache: yes
+
+- hosts: centos
+  become: yes
+  tasks:
+    - name: Install EPEL repository
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Ensure htop is installed on CentOS
+      yum:
+        name: htop
+        state: present
+
+

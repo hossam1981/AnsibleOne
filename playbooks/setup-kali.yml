@@ -1,0 +1,10 @@
+---
+- hosts: Kali
+  become: yes
+  tasks:
+    - name: Ensure htop installed
+      apt:
+        name: htop
+        state: present
+        update_cache: yes
+
